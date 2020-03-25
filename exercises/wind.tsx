@@ -5,7 +5,7 @@ import moment from 'moment'
 import { Input } from '../components/input'
 import { degToRad } from '../helpers'
 
-const densité = 1.2
+const densité = 1.220
 
 export const Wind: FunctionComponent<{}> = props => {
   
@@ -33,14 +33,14 @@ export const Wind: FunctionComponent<{}> = props => {
         </td>
         {function () {
           const area = Math.PI * Math.pow(radius, 2)
-          const pe = 0.5 * densité * area * Math.pow(windSpeed, 3)
+          const pe = 0.5 * densité * Math.pow(windSpeed, 3)
           return <>
             <td>{area}</td>
             <td>
               {pe / 1000}
             </td>
             <td>
-              {(16/27) * pe / 1000}
+              {(16/27) * pe * area / 1000}
             </td>
           </>
         }()}

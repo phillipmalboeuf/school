@@ -15,6 +15,9 @@ import { Consommation } from './exercises/consommation'
 import { Capteur } from './exercises/capteur'
 import { Wind } from './exercises/wind'
 import { LCOE } from './exercises/lcoe'
+import { Ground } from './exercises/ground'
+import { Séchage } from './exercises/sechage'
+import { STEP } from './exercises/step'
 
 render(
   <HashRouter>
@@ -30,6 +33,9 @@ render(
       <Route path='/gon' component={Gon} />
       <Route path='/capteur' component={Capteur} />
       <Route path='/wind' component={Wind} />
+      <Route path='/ground' component={Ground} />
+      <Route path='/sechage' component={Séchage} />
+      <Route path='/step' component={STEP} />
       <Route path='/lcoe' component={LCOE} />
       <Route render={() => <>
         <Link to='/units'>Units</Link><br />
@@ -43,6 +49,9 @@ render(
         <Link to='/gon'>Gon</Link><br />
         <Link to='/capteur'>Capteur</Link><br />
         <Link to='/wind'>Wind</Link><br />
+        <Link to='/ground'>Ground</Link><br />
+        <Link to='/sechage'>Séchage</Link><br />
+        <Link to='/step'>STEP</Link><br />
         <Link to='/lcoe'>LCOE</Link>
       </>} />
     </Switch>
